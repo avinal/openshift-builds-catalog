@@ -1,0 +1,47 @@
+# The images are pulled from our redhat-user-workloads registry or staging registry while the production image is not yet available.
+kind: ImageDigestMirrorSet
+apiVersion: config.openshift.io/v1
+metadata:
+  name: openshift-builds
+spec:
+  imageDigestMirrors:
+    - source: registry.redhat.io/openshift-builds/openshift-builds-rhel9-operator
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-rhel9-operator
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-operator
+    - source: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-operator-bundle
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-operator-bundle
+    - source: registry.redhat.io/openshift-builds/openshift-builds-controller-rhel9
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-controller-rhel9
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-controller
+    - source: registry.redhat.io/openshift-builds/openshift-builds-image-processing-rhel9
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-image-processing-rhel9
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-image-processing
+    - source: registry.redhat.io/openshift-builds/openshift-builds-image-bundler-rhel9
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-image-bundler-rhel9
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-image-bundler
+    - source: registry.redhat.io/openshift-builds/openshift-builds-git-cloner-rhel9
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-git-cloner-rhel9
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-git-cloner
+    - source: registry.redhat.io/openshift-builds/openshift-builds-waiters-rhel9
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-waiters-rhel9
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-waiter
+    - source: registry.redhat.io/openshift-builds/openshift-builds-webhook-rhel9
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-webhook-rhel9
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-webhook
+    - source: registry.redhat.io/openshift-builds/openshift-builds-shared-resource-rhel9
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-shared-resource-rhel9
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-shared-resource
+    - source: registry.redhat.io/openshift-builds/openshift-builds-shared-resource-webhook-rhel9
+      mirrors:
+        - registry.stage.redhat.io/openshift-builds/openshift-builds-shared-resource-webhook-rhel9
+        - quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-shared-resource-webhook

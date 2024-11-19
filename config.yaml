@@ -14,11 +14,11 @@ ocp:
   - 4.16
   - 4.17
 replacements:
-  - from: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
-    to: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
+  # - from: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
+  #   to: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
 # Enable when the images are not pushed to registry.redhat.io
-#  - from: registry.redhat.io/openshift-builds/openshift-builds-operator-bundle
-#    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-operator-bundle
+ - from: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-operator-bundle-1-2
+   to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds-operator-bundle-1-2
 #  - from: registry.redhat.io/openshift-builds/openshift-builds-rhel9-operator
 #    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-operator
 #  - from: registry.redhat.io/openshift-builds/openshift-builds-controller-rhel9
@@ -38,7 +38,8 @@ replacements:
 #  - from: registry.redhat.io/openshift-builds/openshift-builds-shared-resource-webhook-rhel9
 #    to: quay.io/redhat-user-workloads/rh-openshift-builds-tenant/openshift-builds/openshift-builds-shared-resource-webhook
 bundles:
-  - sha256:7396a2b15e1674cdf447889a336cadc2b9a3d292a201c04f310bd10b9d4088b6
-  - sha256:56c474f8bc49060c3f1a6fc19d5984b2bbf81ac3ab76a80ce63faa9010d0759f
-  - sha256:d098d7a51bf3bf5b4c4e27bb570069e4f3e9c897b731ccc8d3a04f5aba77e448
-  - sha256:42d06f8b7d7ba8f527141ab2f8c0573d081f7257d0ed237e7341bd4f6c218e57
+  # - sha256:7396a2b15e1674cdf447889a336cadc2b9a3d292a201c04f310bd10b9d4088b6
+  # - sha256:56c474f8bc49060c3f1a6fc19d5984b2bbf81ac3ab76a80ce63faa9010d0759f
+  # - sha256:d098d7a51bf3bf5b4c4e27bb570069e4f3e9c897b731ccc8d3a04f5aba77e448
+  # - sha256:42d06f8b7d7ba8f527141ab2f8c0573d081f7257d0ed237e7341bd4f6c218e57
+  - sha256:cdfbad6599b109f1f307e3c34da50878b6b8df69e8cfffe34bd191d57354bddd
